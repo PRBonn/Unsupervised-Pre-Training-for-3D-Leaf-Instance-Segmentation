@@ -1,0 +1,5 @@
+add_library(voxel_hash_map voxel_hash_map.cpp)
+target_link_libraries(voxel_hash_map Eigen3::Eigen)
+pybind11_add_module(voxel_hash_map_pybind pybind.cpp)
+target_link_libraries(voxel_hash_map_pybind PRIVATE voxel_hash_map)
+

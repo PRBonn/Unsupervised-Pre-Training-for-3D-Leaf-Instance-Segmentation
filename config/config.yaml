@@ -1,0 +1,33 @@
+experiment:
+    id: pp_0 
+    seed: 1324
+
+# "pp" stands for post processing 
+# "train" for normal pre-training mode
+mode: "pp"
+
+##Data
+data:
+    path: "" # path to dataset 
+
+##Training
+train: 
+    n_gpus: 1
+    workers: 0 
+    max_epoch: 100
+    lr-weights: 0.002
+    lr-biases: 0.005
+    weight-decay: 1e-6
+    lambd: 0.0051
+    weakness: 0.8
+    batch_size: 1 
+    loss_sampling_points: 8000
+    graph_knn: 7
+
+##Network
+model:
+    in_features: 
+        position: True
+        color: True
+    embedding_size: 24
+
